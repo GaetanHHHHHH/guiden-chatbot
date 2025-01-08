@@ -9,3 +9,10 @@ This repo is the code used to create a RAG-chatbot on Azure. The goal of the pro
 - Azure Functions: Two classic scalable functions (one for querying the model (HTTP trigger), one for uploading new documents and indexing them (blob trigger)). The code for these functions is available in the related folder
 - Azure AI Services | Document intelligence: Form Recognizer used to process the PDF documents (more lightweight than other libraries like LangChain)
 - Storage Account | Containers: A simple blob storage used for the documents before indexing
+
+## Running the chatbot
+1. Create all Azure resources (CLI / UI)
+2. Create .env file with all needed env variables (endpoints, secrets, api keys, etc)
+3. Query the LLM using the first function (simply call the script from the terminal)
+4. Try uploading a file using the second script (same as before)
+5. Ask the chatbot about the file to see if it's been indexed appropriately
